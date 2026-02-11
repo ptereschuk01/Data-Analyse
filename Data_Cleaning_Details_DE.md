@@ -1,127 +1,261 @@
-# Data Cleaning Phases (Detailed)
+0. Context and Constraints (Business Context)
 
-## 🟦 Data Collection & Overview
-- [CSV-Import / CSV Import](#csv-import--csv-import)  
-- [Excel-Import / Excel Import](#excel-import--excel-import)  
-- [CSV/Excel/SQL/API-Import / CSV/Excel/SQL/API Import](#csvexcel-sql-api-import--csvexcel-sql-api-import)  
-- [Typprüfung / Check Data Types](#typprüfung--check-data-types)  
-- [Größenprüfung / Check Dimensions](#größenprüfung--check-dimensions)  
-- [Statistikprüfung / Check Statistics](#statistikprüfung--check-statistics)  
+0.1 Description of the Business Context and Domain  
+Industry: [specify the industry, e.g., telecommunications, retail, manufacturing].  
+Brief context: business problem/task, current situation, why the analysis is important.  
+Example: “The goal of the project is to reduce customer churn in the postpaid contract segment”.  
 
-## 🟦 Missing Values Handling
-- [Löschen von Zeilen/Spalten mit fehlenden Werten / Remove Rows/Columns with Missing Values](#löschen-von-zeilenspalten-mit-fehlenden-werten--remove-rowscolumns-with-missing-values)  
-- [Auffüllen von fehlenden Werten / Fill Missing Values](#auffüllen-von-fehlenden-werten--fill-missing-values)  
-- [Vorhersage fehlender Werte / Predict Missing Values](#vorhersage-fehlender-werte--predict-missing-values)  
+0.2 Stakeholders and End Users of the Results  
+Main stakeholders: department heads, management, marketing, sales/customer service.  
+End users: teams that make decisions based on the analysis results (CRM, dashboard, BI tools).  
 
-## 🟦 Duplicates Removal
-- [Überprüfung vollständig identischer Zeilen / Check Fully Duplicate Rows](#überprüfung-vollständig-identischer-zeilen--check-fully-duplicate-rows)  
-- [Zusammenführen von Duplikaten / Merge Duplicates](#zusammenführen-von-duplikaten--merge-duplicates)  
+0.3 Business Metrics (KPI)  
+KPIs by which the impact of the analysis is evaluated:  
+Main metrics: [e.g., Churn Rate, Retention Rate, ARPU]  
+Additional metrics: campaign ROI, average revenue per customer, customer satisfaction  
 
-## 🟦 Data Type Validation
-- [Umwandlung in die benötigten Typen / Convert to Correct Types](#umwandlung-in-die-benötigten-typen--convert-to-correct-types)  
-- [Korrektur von Eingabefehlern / Fix Input Errors](#korrektur-von-eingabefehlern--fix-input-errors)  
+0.4 Constraints and Assumptions  
+Data: quality, completeness, volume, update delays  
+Time and resources: project deadlines, available team, computing capacity  
+Model: requirements for interpretability, reproducibility, explainability  
+Legal and ethical aspects: GDPR compliance, protection of personal data, avoidance of bias  
 
-## 🟦 Anomalies & Outliers
-- [Erkennung von Ausreißern / Detect Outliers](#erkennung-von-ausreißern--detect-outliers)  
-- [Entfernen oder Anpassen / Remove or Adjust](#entfernen-oder-anpassen--remove-or-adjust)  
+1. Problem Definition (Business Understanding)  
+1.1 Objectives of the Analysis  
 
-## 🟦 Standardization & Normalization
-- [Zahlen-Normalisierung / Normalize Numbers](#zahlen-normalisierung--normalize-numbers)  
-- [Kategorien-Standardisierung / Standardize Categories](#kategorien-standardisierung--standardize-categories)  
-- [Bereinigung von Textdaten / Clean Text Data](#bereinigung-von-textdaten--clean-text-data)  
+1.1.1 Business Problem  
+What needs to be solved: [e.g., identification of customers with high churn risk]  
 
-## 🟦 Feature Engineering
-- [Aufteilen von Datumsangaben / Split Dates](#aufteilen-von-datumsangaben--split-dates)  
-- [Berechnung neuer Kennzahlen / Calculate New Metrics](#berechnung-neuer-kennzahlen--calculate-new-metrics)  
-- [Kodierung kategorialer Variablen / Encode Categorical Variables](#kodierung-kategorialer-variablen--encode-categorical-variables)  
+1.1.2 Success Criteria  
+How the result is measured: reduction of Churn Rate by X% within Y months, increase in Retention Rate, increase in ROI of retention campaigns.  
 
-## 🟦 Data Integrity Checks
-- [Logische Prüfungen / Logical Checks](#logische-prüfungen--logical-checks)  
-- [Prüfung der Schlüssel-Eindeutigkeit / Check Key Uniqueness](#prüfung-der-schlüssel-eindeutigkeit--check-key-uniqueness)  
-- [Überprüfung von Wertebereichen / Check Value Ranges](#überprüfung-von-wertebereichen--check-value-ranges)  
+1.2 Key Analytical Questions  
 
-## 🟦 Saving Clean Data
-- [Speichern in CSV/Excel/SQL / Save to CSV/Excel/SQL](#speichern-in-csv-excel-sql--save-to-csv-excel-sql)  
-- [Dokumentation von Änderungen und Reinigungsregeln / Document Changes and Cleaning Rules](#dokumentation-von-änderungen-und-reinigungsregeln--document-changes-and-cleaning-rules)  
+1.2.1 Main Questions  
+Which factors influence [churn, revenue, productivity]?  
+Is it possible to predict the behavior of customers or employees?  
 
----
+1.2.2 Hypotheses to Be Tested (priority / if possible)  
+Customers with frequent support requests churn more often  
+Behavioral changes (usage volume, purchases) signal risk  
+Additional project-specific business hypotheses  
 
-# Detailed Steps
+1.3 Decisions and Management Actions Based on the Analysis  
 
-### CSV-Import / CSV Import
-Description and examples of importing CSV files.  
+1.3.1 Possible Actions  
+Targeted retention campaigns  
+Personalized offers  
+Optimization of service or sales processes  
 
-### Excel-Import / Excel Import
-Description and examples of importing Excel files.  
+1.3.2 Use of Results  
+The results are integrated into business processes via CRM, BI tools, or dashboards  
+Who uses them: marketing, management, customer support  
+The results are regularly monitored and evaluated based on KPIs  
 
-### CSV/Excel/SQL/API-Import / CSV/Excel/SQL/API Import
-Working with different data sources.  
+2. Data Collection (Data Understanding)  
 
-### Typprüfung / Check Data Types
-How to check data types and convert them to the correct types.  
+2.1 Data Sources  
 
-### Größenprüfung / Check Dimensions
-How to check the number of rows and columns, data completeness.  
+2.1.1 Internal Databases  
+SQL (Oracle, PostgreSQL, MySQL)  
+NoSQL (MongoDB, Cassandra)  
 
-### Statistikprüfung / Check Statistics
-Using `describe()` and other methods to understand data distribution.  
+2.1.2 File-Based Sources  
+CSV, Excel, Parquet  
 
-### Löschen von Zeilen/Spalten mit fehlenden Werten / Remove Rows/Columns with Missing Values
-Description of removing missing values.  
+2.1.3 API  
+Internal services, external REST/SOAP APIs  
 
-### Auffüllen von fehlenden Werten / Fill Missing Values
-Methods for filling with mean, median, or mode.  
+2.1.4 Web Scraping  
+Websites, portals, open sources  
 
-### Vorhersage fehlender Werte / Predict Missing Values
-Using models to fill missing values.  
+2.1.5 External Sources  
+Open Data, Kaggle, government data, partner data  
 
-### Überprüfung vollständig identischer Zeilen / Check Fully Duplicate Rows
-Detecting duplicate rows.  
+🔹 Recommendation: Always document the retrieval date and the source version.  
 
-### Zusammenführen von Duplikaten / Merge Duplicates
-How to merge rows with duplicate keys.  
+2.2 Data Acquisition and Documentation  
+Loading data from all defined sources  
 
-### Umwandlung in die benötigten Typen / Convert to Correct Types
-Converting data to `int`, `float`, `str`, `datetime`.  
+Documentation of the data structure:  
+table and field names, data types  
+sources and retrieval date  
+example values  
 
-### Korrektur von Eingabefehlern / Fix Input Errors
-Replacing incorrect values or typos.  
+Documentation of all transformations (ETL processes)  
 
-### Erkennung von Ausreißern / Detect Outliers
-Methods: IQR, z-score for detecting anomalies.  
+2.3 Relevance and Sufficiency Check  
+Do the data correspond to the analysis objectives?  
+Is the volume and depth sufficient for modeling or statistical analysis?  
+Are there additional features that can be collected or generated (feature engineering)?  
 
-### Entfernen oder Anpassen / Remove or Adjust
-Removing outliers or replacing them with median/mode.  
+2.4 Data Quality Check  
+Completeness: missing values, empty fields, NA  
+Plausibility of value ranges: dates, numerical indicators, categories  
+Consistency between sources: matching keys, formats, duplicates  
+Timeliness: data freshness, update date  
+Additionally: identification of anomalies, outliers, logical integrity  
 
-### Zahlen-Normalisierung / Normalize Numbers
-Min-max scaling, z-score for numerical features.  
+🔹 Recommendation: Document all checks in a table or a Data Quality Report to present them to stakeholders.  
 
-### Kategorien-Standardisierung / Standardize Categories
-Unifying categorical values, fixing typos.  
+3. Data Preparation  
 
-### Bereinigung von Textdaten / Clean Text Data
-Removing extra spaces, converting to lowercase.  
+3.1 Data Loading and Initial Review  
 
-### Aufteilen von Datumsangaben / Split Dates
-Creating new features: day, month, year.  
+3.1.0 Environment Setup  
+Python, Pandas, NumPy, Scikit-learn and other libraries.  
+Connection to storage locations: Google Drive, local files, databases.  
 
-### Berechnung neuer Kennzahlen / Calculate New Metrics
-Difference, mean, sum, and other derived features.  
+3.1.1 Importing Libraries and Loading Data  
+pd.read_csv, pd.read_excel, SQL queries or API.  
+Verification of successful import, number of rows/columns.  
 
-### Kodierung kategorialer Variablen / Encode Categorical Variables
-One-hot encoding, label encoding.  
+3.1.2 Initial Data Overview (Exploratory Check)  
+Table dimensions, data types, sample records.  
+Basic statistics: mean, median, std, min/max, quantiles.  
+Immediately visible issues: missing values, duplicates, outliers.  
 
-### Logische Prüfungen / Logical Checks
-Checking data logic, e.g., start_date ≤ end_date.  
+3.2 Data Cleaning / Preprocessing  
 
-### Prüfung der Schlüssel-Eindeutigkeit / Check Key Uniqueness
-Ensuring unique identifiers.  
+3.2.1 Handling Missing Values  
+Removal of rows or columns with critical missing values.  
+Imputation: mean, median, mode, “Unknown”, 0, etc.  
+Documentation of the chosen strategy.  
 
-### Überprüfung von Wertebereichen / Check Value Ranges
-Validating correct minimum and maximum values.  
+3.2.2 Removal of Duplicates and Non-Informative Features  
 
-### Speichern in CSV/Excel/SQL / Save to CSV/Excel/SQL
-Export cleaned data for further analysis.  
+3.2.2.1 Technical Identifiers  
+ID, UUID, ticket numbers, indices  
 
-### Dokumentation von Änderungen und Reinigungsregeln / Document Changes and Cleaning Rules
-Creating logs, describing rules and changes.
+3.2.2.2 Features with Zero or Near-Zero Variance  
+Identical values in all rows  
+
+3.2.2.3 Redundant Features  
+Derived from each other (e.g., date and year)  
+
+3.2.2.4 Columns with Identical Values  
+E.g., column “Gender” if all entries are “Male”  
+
+3.2.3 Treatment of Outliers  
+Cause analysis: error, rare case, real extreme value  
+Removal or transformation (logarithm, winsorization)  
+
+3.2.4 Exclusion of Clearly Non-Informative Data  
+Features without influence on the target variable: random codes, indices, technical fields  
+
+3.3 Data Transformation (Feature Engineering / Transformation)  
+
+3.3.0 Definition of the Target Variable  
+What is predicted and at what point in time.  
+
+3.3.1 Conversion of Data Types  
+Dates → datetime  
+Categories → category  
+Numeric → float/int if necessary  
+
+3.3.2 Separation of Features by Type  
+Quantitative: age, price, income, number of purchases  
+Qualitative: color, gender, city, car brand, payment method  
+Binary: 1/0, Yes/No  
+
+3.3.3 Quantitative Features  
+Keep as is or standardize (StandardScaler) / normalize (MinMaxScaler)  
+
+3.3.4 Encoding of Categorical Features  
+Ordinal Encoding: if there is a natural order (“bad”, “average”, “good”)  
+One-Hot Encoding: if order is not relevant  
+Label Encoding: if there are few categories and numerical interpretation is acceptable  
+
+3.3.5 Creation of New Features (Feature Engineering)  
+Aggregations (mean, sum, max/min)  
+Ratios  
+Time features (year, month, day of week, season)  
+Domain-specific features (e.g., “number of purchases in the last 30 days”)  
+
+3.3.6 Data Leakage Check  
+Exclusion of features containing future information or directly dependent on the target variable  
+
+🔹 Additional Recommendations:  
+1. Document all steps — especially for missing values, duplicates, and encoding.  
+2. Visual data control — hist, boxplot, value_counts for categories.  
+3. Logical plausibility check — e.g., age > 0, purchase date ≤ today.  
+4. Save intermediate versions after each preprocessing step.  
+
+8. Exploratory Data Analysis (Exploratory Data Analysis, EDA)  
+
+4.1 Descriptive Statistics  
+Calculation of key metrics for all quantitative features:  
+Mean (mean)  
+Median (median)  
+Standard deviation (std)  
+Minimum/maximum (min/max)  
+Quartiles/percentiles (25%, 50%, 75%)  
+
+Python example:  
+df.describe(include='all')  
+
+4.2 Distribution Analysis  
+Checking normality and feature distributions  
+Determination of skewness and kurtosis  
+Identification of anomalies and outliers  
+
+Python example:  
+import matplotlib.pyplot as plt  
+import seaborn as sns  
+
+# Histogram for the feature Age  
+sns.histplot(df['Age'], kde=True)  
+plt.show()  
+
+4.3 Data Visualization  
+Histograms – for distributions of quantitative features  
+Boxplot – for identification of outliers  
+Scatter plots – for analyzing the relationship between two quantitative features  
+Heatmap – for visualization of correlations  
+Bar chart – for categorical features  
+
+Python example:  
+# Correlation matrix  
+corr = df.corr()  
+plt.figure(figsize=(10,8))  
+sns.heatmap(corr, annot=True, fmt=".2f", cmap="coolwarm")  
+plt.show()  
+
+# Boxplot  
+sns.boxplot(x='Pclass', y='Age', data=df)  
+plt.show()  
+
+4.4 Correlation Analysis  
+Checking linear relationships between quantitative features  
+For categorical features – chi2 or Cramér's V  
+Identification of multicollinearity for modeling  
+
+Python example:  
+Correlation with the target variable  
+corr_target = df.corr()['Survived'].sort_values(ascending=False)  
+print(corr_target)  
+
+4.5 Segmentation and Hypothesis Testing  
+Dividing the data into groups by key features (e.g., Pclass, gender, age groups)  
+Hypothesis testing using statistical methods:  
+t-test, ANOVA – for quantitative features  
+chi2 – for categorical features  
+
+Python example:  
+from scipy.stats import chi2_contingency, ttest_ind  
+
+# Chi2 for categorical features  
+contingency = pd.crosstab(df['Sex'], df['Survived'])  
+chi2, p, dof, ex = chi2_contingency(contingency)  
+print(f'Chi2={chi2}, p-value={p}')  
+
+# T-test for quantitative features  
+male_age = df[df['Sex']=='male']['Age'].dropna()  
+female_age = df[df['Sex']=='female']['Age'].dropna()  
+t_stat, p_val = ttest_ind(male_age, female_age)  
+print(f'T-test: t={t_stat}, p={p_val}')  
+
+🔹 Additionally:  
+1. Document all charts and statistical results in the report/notebook  
+2. Record conclusions in Markdown: which features are important, which outliers should be removed, which hypotheses are confirmed  
+3. EDA forms the basis for feature engineering and model selection  
