@@ -14,10 +14,6 @@ This repository contains structured learning notes and practical references for 
 - Handling missing values, duplicates, and outliers  
 - Data type correction and validation  
 - Feature understanding and basic transformations  
-
-File:
-- [Data Cleaning Details](Data_Cleaning_Details_DE.md)
-
 ### Exploratory Data Analysis (EDA)
 - Practical EDA techniques and questions  
 - Distribution analysis and data quality checks  
@@ -25,7 +21,7 @@ File:
 - Common pitfalls and best practices  
 
 File:
-- [EDA & Cleaning Notes](EDA_Cleaning_Notes.md)
+- [EDA & Cleaning Notes]( DATA_MINING_V_100500.md)
 
 ## Notes
 These materials are based on self-study, real datasets, and learning experience.  
