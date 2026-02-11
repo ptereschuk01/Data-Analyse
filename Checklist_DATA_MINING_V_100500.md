@@ -1,6 +1,6 @@
 # Checklist data mining
 
-0. Context and Constraints (Business Context)
+## 0. Context and Constraints (Business Context)
 
 0.1 Description of the Business Context and Domain  
 Industry: [specify the industry, e.g., telecommunications, retail, manufacturing].  
@@ -22,8 +22,9 @@ Time and resources: project deadlines, available team, computing capacity
 Model: requirements for interpretability, reproducibility, explainability  
 Legal and ethical aspects: GDPR compliance, protection of personal data, avoidance of bias  
 
-1. Problem Definition (Business Understanding)  
-1.1 Objectives of the Analysis  
+## 1. Problem Definition (Business Understanding)  
+
+### 1.1 Objectives of the Analysis  
 
 1.1.1 Business Problem  
 What needs to be solved: [e.g., identification of customers with high churn risk]  
@@ -31,7 +32,7 @@ What needs to be solved: [e.g., identification of customers with high churn risk
 1.1.2 Success Criteria  
 How the result is measured: reduction of Churn Rate by X% within Y months, increase in Retention Rate, increase in ROI of retention campaigns.  
 
-1.2 Key Analytical Questions  
+### 1.2 Key Analytical Questions  
 
 1.2.1 Main Questions  
 Which factors influence [churn, revenue, productivity]?  
@@ -42,7 +43,7 @@ Customers with frequent support requests churn more often
 Behavioral changes (usage volume, purchases) signal risk  
 Additional project-specific business hypotheses  
 
-1.3 Decisions and Management Actions Based on the Analysis  
+### 1.3 Decisions and Management Actions Based on the Analysis  
 
 1.3.1 Possible Actions  
 Targeted retention campaigns  
@@ -54,9 +55,9 @@ The results are integrated into business processes via CRM, BI tools, or dashboa
 Who uses them: marketing, management, customer support  
 The results are regularly monitored and evaluated based on KPIs  
 
-2. Data Collection (Data Understanding)  
+## 2. Data Collection (Data Understanding)  
 
-2.1 Data Sources  
+### 2.1 Data Sources  
 
 2.1.1 Internal Databases  
 SQL (Oracle, PostgreSQL, MySQL)  
@@ -76,7 +77,7 @@ Open Data, Kaggle, government data, partner data
 
 🔹 Recommendation: Always document the retrieval date and the source version.  
 
-2.2 Data Acquisition and Documentation  
+### 2.2 Data Acquisition and Documentation  
 Loading data from all defined sources  
 
 Documentation of the data structure:  
@@ -86,12 +87,12 @@ example values
 
 Documentation of all transformations (ETL processes)  
 
-2.3 Relevance and Sufficiency Check  
+### 2.3 Relevance and Sufficiency Check  
 Do the data correspond to the analysis objectives?  
 Is the volume and depth sufficient for modeling or statistical analysis?  
 Are there additional features that can be collected or generated (feature engineering)?  
 
-2.4 Data Quality Check  
+### 2.4 Data Quality Check  
 Completeness: missing values, empty fields, NA  
 Plausibility of value ranges: dates, numerical indicators, categories  
 Consistency between sources: matching keys, formats, duplicates  
@@ -100,9 +101,9 @@ Additionally: identification of anomalies, outliers, logical integrity
 
 🔹 Recommendation: Document all checks in a table or a Data Quality Report to present them to stakeholders.  
 
-3. Data Preparation  
+## 3. Data Preparation  
 
-3.1 Data Loading and Initial Review  
+### 3.1 Data Loading and Initial Review  
 
 3.1.0 Environment Setup  
 Python, Pandas, NumPy, Scikit-learn and other libraries.  
@@ -117,7 +118,7 @@ Table dimensions, data types, sample records.
 Basic statistics: mean, median, std, min/max, quantiles.  
 Immediately visible issues: missing values, duplicates, outliers.  
 
-3.2 Data Cleaning / Preprocessing  
+### 3.2 Data Cleaning / Preprocessing  
 
 3.2.1 Handling Missing Values  
 Removal of rows or columns with critical missing values.  
@@ -145,7 +146,7 @@ Removal or transformation (logarithm, winsorization)
 3.2.4 Exclusion of Clearly Non-Informative Data  
 Features without influence on the target variable: random codes, indices, technical fields  
 
-3.3 Data Transformation (Feature Engineering / Transformation)  
+### 3.3 Data Transformation (Feature Engineering / Transformation)  
 
 3.3.0 Definition of the Target Variable  
 What is predicted and at what point in time.  
@@ -183,9 +184,9 @@ Exclusion of features containing future information or directly dependent on the
 3. Logical plausibility check — e.g., age > 0, purchase date ≤ today.  
 4. Save intermediate versions after each preprocessing step.  
 
-8. Exploratory Data Analysis (Exploratory Data Analysis, EDA)  
+## 4. Exploratory Data Analysis (Exploratory Data Analysis, EDA)  
 
-4.1 Descriptive Statistics  
+### 4.1 Descriptive Statistics  
 Calculation of key metrics for all quantitative features:  
 Mean (mean)  
 Median (median)  
@@ -193,24 +194,24 @@ Standard deviation (std)
 Minimum/maximum (min/max)  
 Quartiles/percentiles (25%, 50%, 75%)  
 
-4.2 Distribution Analysis  
+### 4.2 Distribution Analysis  
 Checking normality and feature distributions  
 Determination of skewness and kurtosis  
 Identification of anomalies and outliers  
 
-4.3 Data Visualization  
+### 4.3 Data Visualization  
 Histograms – for distributions of quantitative features  
 Boxplot – for identification of outliers  
 Scatter plots – for analyzing the relationship between two quantitative features  
 Heatmap – for visualization of correlations  
 Bar chart – for categorical features  
 
-4.4 Correlation Analysis  
+### 4.4 Correlation Analysis  
 Checking linear relationships between quantitative features  
 For categorical features – chi2 or Cramér's V  
 Identification of multicollinearity for modeling   
 
-4.5 Segmentation and Hypothesis Testing  
+### 4.5 Segmentation and Hypothesis Testing  
 Dividing the data into groups by key features (e.g., Pclass, gender, age groups)  
 Hypothesis testing using statistical methods:  
 t-test, ANOVA – for quantitative features  
