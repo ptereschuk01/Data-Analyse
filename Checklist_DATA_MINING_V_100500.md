@@ -1,3 +1,5 @@
+# Checklist data mining
+
 0. Context and Constraints (Business Context)
 
 0.1 Description of the Business Context and Domain  
