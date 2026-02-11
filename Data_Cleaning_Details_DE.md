@@ -191,21 +191,10 @@ Standard deviation (std)
 Minimum/maximum (min/max)  
 Quartiles/percentiles (25%, 50%, 75%)  
 
-Python example:  
-df.describe(include='all')  
-
 4.2 Distribution Analysis  
 Checking normality and feature distributions  
 Determination of skewness and kurtosis  
 Identification of anomalies and outliers  
-
-Python example:  
-import matplotlib.pyplot as plt  
-import seaborn as sns  
-
-# Histogram for the feature Age  
-sns.histplot(df['Age'], kde=True)  
-plt.show()  
 
 4.3 Data Visualization  
 Histograms – for distributions of quantitative features  
@@ -214,46 +203,16 @@ Scatter plots – for analyzing the relationship between two quantitative featur
 Heatmap – for visualization of correlations  
 Bar chart – for categorical features  
 
-Python example:  
-# Correlation matrix  
-corr = df.corr()  
-plt.figure(figsize=(10,8))  
-sns.heatmap(corr, annot=True, fmt=".2f", cmap="coolwarm")  
-plt.show()  
-
-# Boxplot  
-sns.boxplot(x='Pclass', y='Age', data=df)  
-plt.show()  
-
 4.4 Correlation Analysis  
 Checking linear relationships between quantitative features  
 For categorical features – chi2 or Cramér's V  
-Identification of multicollinearity for modeling  
-
-Python example:  
-Correlation with the target variable  
-corr_target = df.corr()['Survived'].sort_values(ascending=False)  
-print(corr_target)  
+Identification of multicollinearity for modeling   
 
 4.5 Segmentation and Hypothesis Testing  
 Dividing the data into groups by key features (e.g., Pclass, gender, age groups)  
 Hypothesis testing using statistical methods:  
 t-test, ANOVA – for quantitative features  
 chi2 – for categorical features  
-
-Python example:  
-from scipy.stats import chi2_contingency, ttest_ind  
-
-# Chi2 for categorical features  
-contingency = pd.crosstab(df['Sex'], df['Survived'])  
-chi2, p, dof, ex = chi2_contingency(contingency)  
-print(f'Chi2={chi2}, p-value={p}')  
-
-# T-test for quantitative features  
-male_age = df[df['Sex']=='male']['Age'].dropna()  
-female_age = df[df['Sex']=='female']['Age'].dropna()  
-t_stat, p_val = ttest_ind(male_age, female_age)  
-print(f'T-test: t={t_stat}, p={p_val}')  
 
 🔹 Additionally:  
 1. Document all charts and statistical results in the report/notebook  
