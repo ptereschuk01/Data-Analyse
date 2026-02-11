@@ -21,7 +21,7 @@ This repository contains structured learning notes and practical references for 
 - Common pitfalls and best practices  
 
 File:
-- [EDA & Cleaning Notes]( DATA_MINING_V_100500.md)
+- [DATA MINING_Versuch Ca. 100500](DATA_MINING_V_100500.md)
 
 ## Notes
 These materials are based on self-study, real datasets, and learning experience.  
