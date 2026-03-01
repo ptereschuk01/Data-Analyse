@@ -1,6 +1,6 @@
 <img width="194" height="127" alt="image" src="https://github.com/user-attachments/assets/29d1d0a0-6259-440a-b2b1-423389bc1521" />
 
-👉 Machine Learning for Everyone: [In simple words. With real-world examples. Yes, again](https://vas3k.blog/blog/machine_learning/)
+👉 Machine Learning for Everyone: [In simple words. With real-world examples. Yes, again](https://vas3k.com/blog/machine_learning/)
 
 
 
