@@ -33,6 +33,7 @@ $$
 ## 2️⃣ Manhattan-Distanz / Manhattan Distance (City-Block)
 
 **DE:**  
+
 $$
 d_M(\mathbf{p}, \mathbf{q}) = |p_1 - q_1| + |p_2 - q_2| + \dots + |p_n - q_n|
 $$
@@ -43,6 +44,7 @@ $$
 - Wird verwendet, wenn Bewegung auf ein Raster beschränkt ist  
 
 **EN:**  
+
 $$
 d_M(\mathbf{p}, \mathbf{q}) = |p_1 - q_1| + |p_2 - q_2| + \dots + |p_n - q_n|
 $$
