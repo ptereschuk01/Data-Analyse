@@ -1,3 +1,29 @@
+# CRISP-DM Data Analysis Framework (EN / DE / RU)
+
+| English | Deutsch | Русский |
+|---|---|---|
+| **0. Business Context and Constraints** | **0. Kontext und Einschränkungen (Business Context)** | **0. Контекст и ограничения (Business Context)** |
+| **0.1 Description of business context and domain** | **0.1 Beschreibung des Geschäftskontexts und der Fachdomäne** | **0.1 Описание бизнес-контекста и предметной области** |
+| Domain: [specify industry, e.g. telecom, retail, manufacturing] | Branche: [Branche angeben, z. B. Telekommunikation, Einzelhandel, Produktion] | Область: [указать отрасль, напр. телеком, розница, производство] |
+| Short context: business problem, current situation, why analysis matters | Kurzer Kontext: Geschäftsproblem/-aufgabe, aktuelle Situation, warum die Analyse wichtig ist | Краткий контекст: проблема/задача бизнеса, текущая ситуация, почему анализ важен |
+| Example: "Goal is to reduce customer churn in postpaid segment" | Beispiel: „Ziel ist die Reduzierung der Kundenabwanderung im Postpaid-Segment“ | Пример: «Цель проекта — снижение оттока клиентов в сегменте постоплатных контрактов» |
+
+| **0.2 Stakeholders and end users** | **0.2 Stakeholder und Endnutzer** | **0.2 Заинтересованные стороны и пользователи** |
+| Key stakeholders: management, marketing, sales, support | Haupt-Stakeholder: Management, Marketing, Vertrieb, Kundenservice | Основные стейкхолдеры: менеджмент, маркетинг, продажи, поддержка |
+| End users: teams using insights (CRM, BI, dashboards) | Endnutzer: Teams, die Ergebnisse nutzen (CRM, BI, Dashboards) | Конечные пользователи: команды, принимающие решения (CRM, BI, dashboard) |
+
+| **0.3 Business KPIs** | **0.3 Geschäftskennzahlen (KPI)** | **0.3 Бизнес-метрики (KPI)** |
+| Metrics to evaluate success | Kennzahlen zur Bewertung des Erfolgs | KPI, по которым оценивается результат |
+| Main: churn rate, retention rate, ARPU | Hauptkennzahlen: Churn Rate, Retention Rate, ARPU | Основные: Churn Rate, Retention Rate, ARPU |
+| Additional: ROI, revenue per user, satisfaction | Zusätzliche: ROI, Umsatz pro Kunde, Kundenzufriedenheit | Дополнительные: ROI, доход, удовлетворенность |
+
+| **0.4 Constraints and assumptions** | **0.4 Einschränkungen und Annahmen** | **0.4 Ограничения и допущения** |
+| Data: quality, completeness, delays | Daten: Qualität, Vollständigkeit, Aktualität | Данные: качество, полнота, задержки |
+| Time/resources: deadlines, team, compute | Zeit/Ressourcen: Fristen, Team, Rechenleistung | Время и ресурсы: сроки, команда,
+
+
+
+
 # Checklist data mining
 
 ## 0. Context and Constraints (Business Context)
